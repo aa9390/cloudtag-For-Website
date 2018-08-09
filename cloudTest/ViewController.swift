@@ -20,11 +20,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        timer  = CADisplayLink(target: self, selector:)
-//        timer.add(to: .main, forMode: .defaultRunLoopMode)
-        
-//        var tagArray = tagAndProjectDic.keys
-        
         tagView = DBSphereView(frame: CGRect(x: -200, y: -200, width: 1000, height: 1000))
         let array = NSMutableArray(capacity: 0)
         
@@ -50,15 +45,14 @@ class ViewController: UIViewController {
     
     @objc func tagPressed(_ btn: UIButton) {
         let projectArray = tagAndProjectDic[(btn.titleLabel?.text)!]!
-//        timer.isPaused = true
-//        tagView.timerStop()
+        tagView.timerStop()
         
         // 프로젝트 나오는 부분
         UIView.animate(withDuration: 0.5, animations: {() -> Void in
             btn.transform = CGAffineTransform(scaleX: 3, y: 3)
             
             // 클릭한 버튼을 중심으로 view가 새로 생성됨
-            self.projectView = DBSphereView(frame: CGRect(x: (btn.frame.origin.x), y: (btn.frame.origin.y), width: 100, height: 100))
+            self.projectView = DBSphereView(frame: CGRect(x: (btn.frame.origin.x+50), y: (btn.frame.origin.y), width: 100, height: 100))
 
             let array = NSMutableArray(capacity: 0)
 
@@ -91,7 +85,7 @@ class ViewController: UIViewController {
             (finished) -> Void in UIView.animate(withDuration: 0.3, animations: {() -> Void in
                 btn.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: { (finished) -> Void in
-//                self.projectView.timerStart()
+                self.projectView.timerStart()
             })
         }
     }
@@ -106,14 +100,10 @@ class ViewController: UIViewController {
     // 프로젝트 선택 시
     // 해당 프로젝트로 이동해야함
     @objc func projectPressed(_ btn: UIButton) {
-//        let storyboard: UIStoryboard = UIStoryboard(name: "Collection", bundle: nil)
-//        let nextView = storyboard.instantiateViewController(withIdentifier: "ProjectView") as! CollectionTableViewController
-//        nextView.modelProject2 = modelProject.searchProjectOfTitle(title: (btn.titleLabel?.text)!)
-//        self.navigationController?.pushViewController(nextView, animated: true)
-//        //        self.present(nextView!, animated: true, completion: nil)
-//
-//        print("\(String(describing: btn.titleLabel!.text))프로젝트 선택됨")
-//        self.sphereView.isHidden = true
-//        self.sphereView.timerStop()
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextView = storyboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+        nextView.labelText = btn.titleLabel?.text
+        nextView.title = "Detail"
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
 }
