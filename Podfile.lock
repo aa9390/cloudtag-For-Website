@@ -1,0 +1,23 @@
+PODS:
+  - DBSphereTagCloudSwift (1.0.0)
+
+DEPENDENCIES:
+  - DBSphereTagCloudSwift (from `https://github.com/apparition47/DBSphereTagCloudSwift.git`)
+
+EXTERNAL SOURCES:
+  DBSphereTagCloudSwift:
+    :git: https://github.com/apparition47/DBSphereTagCloudSwift.git
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  DBSphereTagCloudSwift:
+    :commit: 692e5cfc7b8b689bd067b21d5d306685b4d39959
+    :git: https://github.com/apparition47/DBSphereTagCloudSwift.git
+    :submodules: true
+
+SPEC CHECKSUMS:
+  DBSphereTagCloudSwift: c884ea799ff4706c9f2e4c19d62bff5a8900f55c
+
+PODFILE CHECKSUM: 8e247d7df0956b61eea51c720833ea59e63a554e
+
+COCOAPODS: 1.5.3

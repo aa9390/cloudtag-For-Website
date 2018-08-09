@@ -1,0 +1,28 @@
+{
+  "name": "DBSphereTagCloudSwift",
+  "version": "1.0.0",
+  "summary": "A 3D spherical tag cloud view of iOS.",
+  "description": "DBSphereTagCloud is a 3D spherical tag cloud view using UIKit.",
+  "homepage": "https://github.com/apparition47/DBSphereTagCloudSwift",
+  "screenshots": "https://user-images.githubusercontent.com/3298414/31832079-9be84c94-b600-11e7-95d7-ccd980253199.gif",
+  "license": "MIT",
+  "authors": {
+    "Dong Xinbao": "dongxinb@gmail.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/apparition47/DBSphereTagCloud.git",
+    "branch": "swift",
+    "submodules": true
+  },
+  "source_files": "**/{Matrix,MatrixConcatenation,MatrixCreation,MatrixMultiplication,MatrixSubscripting,DBSphereView}.swift",
+  "frameworks": [
+    "Foundation",
+    "CoreGraphics",
+    "UIKit",
+    "Accelerate"
+  ],
+  "requires_arc": true
+}
