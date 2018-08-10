@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         detailLabel.text = labelText
-
     }
 
 }
