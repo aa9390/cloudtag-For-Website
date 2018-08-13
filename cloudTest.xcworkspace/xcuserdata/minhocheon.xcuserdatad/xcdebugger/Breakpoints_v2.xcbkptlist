@@ -35,5 +35,83 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cloudTest/DetailViewController.swift"
+            timestampString = "555858381.929318"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cloudTest.DetailViewController.labelText.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "cloudTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/cloudTest/cloudTest/DetailViewController.swift"
+                  timestampString = "555856730.841321"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cloudTest.DetailViewController.labelText.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "cloudTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/cloudTest/cloudTest/DetailViewController.swift"
+                  timestampString = "555856730.8492531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "229">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cloudTest.DetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; cloudTest.DetailViewController"
+                  moduleName = "cloudTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/cloudTest/cloudTest/DetailViewController.swift"
+                  timestampString = "555856730.8512551"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "295">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cloudTest.DetailViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;cloudTest.DetailViewController&gt;"
+                  moduleName = "cloudTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhocheon/Documents/cloudTest/cloudTest/DetailViewController.swift"
+                  timestampString = "555856730.853148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

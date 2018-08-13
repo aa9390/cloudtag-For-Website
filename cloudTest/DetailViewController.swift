@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  cloudTest
 //
-//  Created by MinhoCheon on 2018. 8. 9..
+//  Created by soyeonKim on 2018. 8. 9..
 //  Copyright © 2018년 ksy. All rights reserved.
 //
 

@@ -14,13 +14,11 @@ class MainViewController: UIViewController {
     var detailView: DBSphereView!
     var tagAndDetailDic:[String:[String]]
         = ["과일":["사과", "배", "복숭아", "딸기"], "동물":["코끼리", "강아지"], "감정":["기쁨", "슬픔", "분노"], "교통수단":["자동차", "자전거", "비행기"], "계절":["봄", "여름", "가을" ,"겨울"]]
-    var isClicked:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tagView = DBSphereView(frame: CGRect(x: -200, y: -200, width: 1000, height: 1000))
-//        let array = NSMutableArray(capacity: 0)
         var array:Array<UIView> = []
         
         for (key, value) in tagAndDetailDic {
@@ -34,12 +32,10 @@ class MainViewController: UIViewController {
             btn.layer.masksToBounds = true
             btn.contentMode = UIViewContentMode.scaleAspectFit
             btn.addTarget(self, action: #selector(MainViewController.tagPressed(_:)), for: UIControlEvents.touchUpInside)
-//            array.add(btn)
             array.append(btn)
             tagView.addSubview(btn)
         }
 
-//        tagView.setCloudTags((array as AnyObject) as! [UIView])
         tagView.setCloudTags(array)
         self.view.addSubview(tagView)
     }
@@ -55,10 +51,7 @@ class MainViewController: UIViewController {
             // 클릭한 버튼을 중심으로 view가 새로 생성됨
             self.detailView = DBSphereView(frame: CGRect(x: (btn.frame.origin.x+100), y: (btn.frame.origin.y), width: 100, height: 100))
 
-//            let array = NSMutableArray(capacity: 0)
             var array:Array<UIView> = []
-
-            print(detailArray)
             
             for i in 0 ..< detailArray.count {
                 let btn: UIButton = UIButton(type: UIButtonType.system)
@@ -72,11 +65,10 @@ class MainViewController: UIViewController {
                 btn.frame = CGRect(x: 0, y: 0, width: 120, height: 70)
                 btn.layer.cornerRadius = 0
                 btn.addTarget(self, action: #selector(MainViewController.detailPressed(_:)), for: UIControlEvents.touchUpInside)
-//                array.add(btn)
                 array.append(btn)
                 self.detailView.addSubview(btn)
             }
-//            self.detailView.setCloudTags((array as AnyObject) as! [UIView])
+            
             self.detailView.setCloudTags(array)
             self.view.addSubview(self.detailView)
             self.view.bringSubview(toFront: self.detailView)
@@ -94,13 +86,10 @@ class MainViewController: UIViewController {
     
     
     @objc func backgroundPressed(_ sender:UITapGestureRecognizer){
-            self.detailView.isHidden = true
-        
+        self.detailView.isHidden = true
     }
     
     
-    // 프로젝트 선택 시
-    // 해당 프로젝트로 이동해야함
     @objc func detailPressed(_ btn: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextView = storyboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
