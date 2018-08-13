@@ -20,7 +20,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         tagView = DBSphereView(frame: CGRect(x: -200, y: -200, width: 1000, height: 1000))
-        let array = NSMutableArray(capacity: 0)
+//        let array = NSMutableArray(capacity: 0)
+        var array:Array<UIView> = []
         
         for (key, value) in tagAndDetailDic {
             let btn: UIButton = UIButton(type: .custom)
@@ -33,11 +34,13 @@ class MainViewController: UIViewController {
             btn.layer.masksToBounds = true
             btn.contentMode = UIViewContentMode.scaleAspectFit
             btn.addTarget(self, action: #selector(MainViewController.tagPressed(_:)), for: UIControlEvents.touchUpInside)
-            array.add(btn)
+//            array.add(btn)
+            array.append(btn)
             tagView.addSubview(btn)
         }
 
-        tagView.setCloudTags((array as AnyObject) as! [UIView])
+//        tagView.setCloudTags((array as AnyObject) as! [UIView])
+        tagView.setCloudTags(array)
         self.view.addSubview(tagView)
     }
     
@@ -52,7 +55,8 @@ class MainViewController: UIViewController {
             // 클릭한 버튼을 중심으로 view가 새로 생성됨
             self.detailView = DBSphereView(frame: CGRect(x: (btn.frame.origin.x+100), y: (btn.frame.origin.y), width: 100, height: 100))
 
-            let array = NSMutableArray(capacity: 0)
+//            let array = NSMutableArray(capacity: 0)
+            var array:Array<UIView> = []
 
             print(detailArray)
             
@@ -68,10 +72,12 @@ class MainViewController: UIViewController {
                 btn.frame = CGRect(x: 0, y: 0, width: 120, height: 70)
                 btn.layer.cornerRadius = 0
                 btn.addTarget(self, action: #selector(MainViewController.detailPressed(_:)), for: UIControlEvents.touchUpInside)
-                array.add(btn)
+//                array.add(btn)
+                array.append(btn)
                 self.detailView.addSubview(btn)
             }
-            self.detailView.setCloudTags((array as AnyObject) as! [UIView])
+//            self.detailView.setCloudTags((array as AnyObject) as! [UIView])
+            self.detailView.setCloudTags(array)
             self.view.addSubview(self.detailView)
             self.view.bringSubview(toFront: self.detailView)
 
